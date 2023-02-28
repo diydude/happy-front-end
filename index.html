@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <title>Main Screen</title>
-    <link rel='stylesheet' href='style.css'>
-    <meta name='keywords' content='image, gif, images, gifs, search'>
-  </head>
-  <body>
-  	<header>
-  		<nav class='main-navigation'>
-  			<img src='img/logo.svg' alt='logo'>
-  			<a href='#'>GIFs</a>
-  			<a href='#'>Photos</a>
-  		</nav>
-  		<h1 class='site-header'>Search for images and GIFs</h1>
-  		<p class='site-description'>Pictures and GIFs for personal use.</p>
-  	</header>
-  	<main>
-  		<div class='search'>
-  			<form class='form' action='#'>
-          <select class='select'>
-           <option value='gifs'>GIFs</option>
-           <option value='photos'>Photos</option>
-         </select>
-         <input type='text' placeholder='Search…' class='input'>
-        </form>
-  			<img src='img/lupa.svg' alt='loupe'>
-  		</div>
-  		<nav class='sort'>
-  			<a href='#'>Latest</a>
-        <div class='circle'></div>
-        <div class='divider'></div>
-  			<a href='#'>Popular</a>
-  		</nav>
-  		<div class='pictures'>
-  		 <section>
-  		  <div class='element'>
-  		   <img src='img/monkey.svg' alt='Skate Monkey'>
-  		  </div>
-  		  <h2 class='title'>Chotte Ustaad</h2>
-  		  <p>This vector is available in<br>.EPS and .PSD formats.</p>
-  		  <span class='download'>
-          <a href='#'>Download</a>
-          <img src=img/download.svg>
-        </span>
-  		 </section>
-  		 <section>
-  		  <div class='element'>
-  		   <img src='img/kitty.svg' alt='Vampire Kitten'>
-  		  </div>
-  		  <h2 class='title'>Rowdy Billa</h2>
-  		  <p>This vector is available in<br>.EPS and .PSD formats.</p>
-  		  <span class='download'>
-          <a href='#'>Download</a>
-          <img src=img/download.svg>
-        </span>
-  		 </section>
-  		 <section>
-  		  <div class='element'>
-  		   <img src='img/elephy.svg' alt='Smoothie Elephant'>
-  		  </div>
-  		  <h2 class='title'>Humpty Dumpty</h2>
-  		  <p>This vector is available in<br>.EPS and .PSD formats.</p>
-  		  <span class='download'>
-          <a href='#'>Download</a>
-  		    <img src=img/download.svg>
-        </span>
-  		 </section>
-  		</div>
-  	</main>
-    <footer>
-      <button class='next'>
-	   	 <a href='#'>Next page</a>
-       <img src='img/arrow-right.svg'>
-      </button>
-  	  <nav class='pages'>
-    	  <p>Page</p>
-        <button class='go'>
-     	  	<a href='#'>&lt;</a>
-        </button>
-        <button class='current'>1</button>
-        <button class='go'>
-     	  	<a href='#'>&gt;</a>
-        </button>
-  	   	<p>of 120</p>
-      </nav>
-    </footer>
-  </body>
+	<head>
+		<meta charset='utf-8'>
+		<title>Main Screen</title>
+		<link rel='stylesheet' href='style.css'>
+		<meta name='keywords' content='image, gif, images, gifs, search'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	</head>
+	<body class='body'>
+		<header class='header'>
+			<nav class='main-navigation'>
+				<a href='#'>
+					<img src='img/logo.svg' alt='logo'>
+				</a>
+				<a href='#'>GIFs</a>
+				<a href='#'>Photos</a>
+			</nav>
+			<h1 class='search-header'>Search for images and GIFs</h1>
+			<p class='search-description'>Pictures and GIFs for personal use.</p>
+		</header>
+		<main class='main'>
+			<div class='search'>
+				<form class='form' action='#'>
+					<select class='select'>
+						<option value='gifs'>GIFs</option>
+						<option value='photos'>Photos</option>
+					</select>
+					<input type='text' placeholder='Search…' class='input'>
+				</form>
+				<img src='img/loupe.svg' alt='loupe'>
+			</div>
+			<nav class='sort'>
+				<a href='#'>Latest</a>
+				<div class='circle'></div>
+				<div class='divider'></div>
+				<a href='#'>Popular</a>
+			</nav>
+			<div class='pictures'>
+				<section class='card'>
+					<div class='element'>
+						<img src='img/monkey.svg' alt='Skate Monkey'>
+					</div>
+					<h2 class='title'>Chotte Ustaad</h2>
+					<p>This vector is available in<br>.EPS and .PSD formats.</p>
+					<span class='download'>
+						<a href='#'>Download</a>
+						<img src=img/download.svg>
+					</span>
+				</section>
+				<section class='card'>
+					<div class='element'>
+						<img src='img/kitty.svg' alt='Vampire Kitten'>
+					</div>
+					<h2 class='title'>Rowdy Billa</h2>
+					<p>This vector is available in<br>.EPS and .PSD formats.</p>
+					<span class='download'>
+						<a href='#'>Download</a>
+						<img src=img/download.svg>
+					</span>
+				</section>
+				<section class='card'>
+					<div class='element'>
+						<img src='img/elephy.svg' alt='Smoothie Elephant'>
+					</div>
+					<h2 class='title'>Humpty Dumpty</h2>
+					<p>This vector is available in<br>.EPS and .PSD formats.</p>
+					<span class='download'>
+						<a href='#'>Download</a>
+						<img src=img/download.svg>
+					</span>
+				</section>
+			</div>
+		</main>
+		<footer class='footer'>
+			<button class='next'>
+				<a href='#'>Next page</a>
+				<img src='img/arrow-right.svg'>
+			</button>
+			<nav class='pages'>
+				<p>Page</p>
+				<button class='go'>
+					<a href='#'>&lt;</a>
+				</button>
+				<button class='current'>1</button>
+				<button class='go'>
+					<a href='#'>&gt;</a>
+				</button>
+				<p>of 120</p>
+			</nav>
+		</footer>
+	</body>
 </html>

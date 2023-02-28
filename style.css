@@ -1,20 +1,26 @@
-body {
+.body {
 	background-color: #161819;
 	border-radius: 46px;
 	font-family: Poppins, Arial, sans-serif;
 	color: #FFFFFF;
 	max-width: 100%;
 }
-header {
+
+.header {
 	margin: auto;
 	display: block;
+	width: 1660px; /* почекать цифру*/
 }
+
 .main-navigation {
 	display: flex;
 	align-items: center;
 	padding: 30px 120px;
 	gap: 40px;
+	width: 1660px; /* почекать цифру*/
+	margin: auto;
 }
+
 .main-navigation a {
 	font-weight: 400;
 	font-size: 20px;
@@ -22,7 +28,8 @@ header {
 	text-decoration: none;
 	color: #FFFFFF;
 }
-.site-header {
+
+.search-header {
 	font-weight: 600;
 	font-size: 48px;
 	line-height: 72px;
@@ -30,7 +37,8 @@ header {
 	text-align: center;
 	margin: auto;
 }
-.site-description {
+
+.search-description {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 30px;
@@ -40,11 +48,14 @@ header {
 	opacity: 0.5;
 	margin: 30px auto;
 }
-main {
+
+.main {
 	margin: auto;
 	padding: 40px 60px;
 	max-width: 100%;
+	width: 1660px; /* почекать цифру*/
 }
+
 .search {
 	width: 810px;
 	height: 64px;
@@ -54,11 +65,13 @@ main {
 	display: flex;
 	justify-content: space-between;
 }
+
 .form {
 	display: flex;
 	flex-direction: row;
 	align-content: flex-start;
 }
+
 .select {
 	padding: 12px 16px;
 	gap: 4px;
@@ -71,6 +84,7 @@ main {
 	border-radius: 10px;
 	color: #FFFFFF;
 }
+
 .input {
 	width: 500px;
 	height: 33px;
@@ -85,6 +99,7 @@ main {
 	background-color: #252728;
 	border: none;
 }
+
 .search img {
 	margin: 20px;
 	left: 92.35%;
@@ -93,6 +108,7 @@ main {
 	bottom: 26.56%;
 	background: #252728;
 }
+
 .sort {
 	display: flex;
 	flex-direction: row;
@@ -101,6 +117,7 @@ main {
 	width: 260px;
 	justify-content: space-between;
 }
+
 .sort a {
 	font-weight: 400;
 	font-size: 24px;
@@ -109,6 +126,7 @@ main {
 	color: #FFFFFF;
 	text-decoration: none;
 }
+
 .circle {
 	background-color: red;
 	width: 9px;
@@ -116,22 +134,27 @@ main {
 	border-radius: 5px;
 	margin: 0 0 20px -20px;
 }
+
 .divider {
 	width: 20px;
 	height: 0px;
 	border: 2px solid rgba(255, 255, 255, 0.25);
 	transform: rotate(90deg);
 }
+
 .pictures {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-section {
+
+.card {
 	background: #1F2123;
 	border-radius: 24px;
 	padding: 30px;
+	max-width: 33%; /* почекать цифру*/
 }
+
 .element {
 	margin: 10px;
 	background: #393A3E;
@@ -139,11 +162,13 @@ section {
 	display: flex;
 	align-items: center;
 }
+
 .element img {
 	margin: auto;
 	max-width: 50%;
 	padding: 40px;
 }
+
 .title {
 	text-align: center;
 	font-weight: 600;
@@ -151,6 +176,7 @@ section {
 	line-height: 48px;
 	letter-spacing: 0.05em;
 }
+
 .pictures p {
 	font-weight: 400;
 	font-size: 14px;
@@ -160,6 +186,7 @@ section {
 	color: #FFFFFF;
 	opacity: 0.6;
 }
+
 .pictures a {
 	font-weight: 500;
 	font-size: 24px;
@@ -174,15 +201,20 @@ section {
 	align-items: center;
 	padding-right: 10px;
 }
+
 .download {
 	display: flex;
 	justify-content: center;
 }
-footer {
+
+.footer {
 	display: flex;
 	flex-direction: row;
-	margin: 40 auto;
-} 
+	margin: 40px auto;
+	width: 1660px; /* почекать цифру*/
+	position: relative;
+}
+
 .next {
 	margin: 70px auto;
 	background-color: #252728;
@@ -192,6 +224,7 @@ footer {
 	border: none;
 	text-align: center;
 }
+
 .next a {
 	color: #FFFFFF;
 	font-weight: 400;
@@ -200,7 +233,9 @@ footer {
 	letter-spacing: 0.1em;
 	text-decoration: none;
 	padding-right: 10px;
+	/* position: absolute; */
 }
+
 .pages {
 	display: flex;
 	flex-direction: row;
@@ -212,6 +247,7 @@ footer {
 	height: 34px;
 	color: #FFFFFF;
 }
+
 .go {
 	background-color: #1F2123;
 	border: none;
@@ -219,11 +255,13 @@ footer {
 	height: 34px;
 	border-radius: 6px;
 }
+
 .pages a {
 	color: #FFFFFF;
 	opacity: 0.5;
 	text-decoration: none;
 }
+
 .current {
 	background-color: #393A3E;
 	border: none;
@@ -234,6 +272,7 @@ footer {
 	border-radius: 6px;
 	color: #FFFFFF;
 }
+
 .pages p {
 	opacity: 0.25;
 }
