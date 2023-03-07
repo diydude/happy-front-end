@@ -2,8 +2,10 @@
 // При помощи цикла for выведите чётные числа от 2 до 10.
 // Для проверки на чётность используйте оператор получения остатка от деления % - if (i % 2 == 0)
 
-for (i = 2; i <= 10; i++) if (i % 2 == 0) {
+for (i = 2; i <= 10; i++) {
+	if (i % 2 == 0) {
 	console.log(i)
+	}
 };
 
 // 1.1) Перепишите код, заменив цикл for на while, без изменения поведения цикла.
@@ -48,8 +50,8 @@ const ask = (question, answer, yes, no) => {question; answer ? yes() : no()};
 
 // Сейчас в функцию ask передаются анонимные каллбек функции, дайте им имена и передавайте как каллбек через переменную описания.
 
-function question() {console.log('Вы согласны?')};
-function yes() {console.log('Вы согласились.')};
-function no() {console.log('Вы отказались.')};
+function askQuestion() {console.log('Вы согласны?')};
+function answerYes() {console.log('Вы согласились.')};
+function answerNo() {console.log('Вы отказались.')};
 
-ask(question, true, yes, no);
+ask(askQuestion, true, answerYes, answerNo);
