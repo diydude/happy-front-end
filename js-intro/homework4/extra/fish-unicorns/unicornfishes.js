@@ -15,6 +15,8 @@ let city2 = {
 	population: 1e6
 };
 
+console.log(city1, city2);
+
 // Создайте у объектов city1 и city2 методы getName(), которые вернут соответствующие названия городов
 
 city1.getName = function() { return this.name };
@@ -24,35 +26,98 @@ city2.getName = function() { return this.name };
 // в формате «name=ГородN\npopulation=10000000\n». Для второго города будет строка со своими значениями.
 // Примечание: можно обращаться к каждому свойству через цикл for/in, но методы объекта возвращать не нужно
 
-city1.exportStr() = function() {
-	return ('name=', this.name, '\npopulation=', this.population, '\n')
-};
-city2.exportStr() = function() {
-	return ('name=', this.name, '\npopulation=', this.population, '\n')
-};
-console.log(city1.exportStr(), city2.exportStr());
+function exportStr(city) {
+	delete city.getName; // чтобы в консоль не выводилась функция
+	let str = '';
+	for (let key in city) {
+		str += `${key}=${city[key]}\n`;
+	}
+	return str;
+}
+
+console.log(exportStr(city1));
+console.log(exportStr(city2));
 
 // Создайте глобальную функцию getObj(), которая возвращает this.
 // А у каждого из объектов city1 или city2 метод getCity, который ссылается на getObj.
 // Проверьте работу метода. Примечание: к объекту вызова можно обратиться через this.
 
+function getObj() { return this };
+
+city1.getCity = getObj;
+city2.getCity = getObj;
+
+console.log(city1.getCity());
+console.log(city2.getCity());
+
 // (*) Создать объект obj, с методами method1(),method2() и method3().
 // В методе method3() должна возвращаться строка «метод3».
 // Сделайте так, чтобы было возможно выполнение кода obj.method1().method2().method3().
 
+let obj = {
+	method1() {
+		return this;
+	},
+	method2() {
+		return this;
+	},
+	method3() {
+		return 'метод3';
+	}
+};
+
+console.log(obj.method1().method2().method3());
+
 // Создайте массив d1 с числовыми величинами 45,78,10,3. Добавьте в массив d1 еще одно число ( d1[7] = 100).
 // Выведите в консоль весь массив и его элементы с индексами 6 и 7.
+
+let d1 = [45, 78, 10, 3];
+d1[7] = 100;
+console.log(d1);
+console.log(d1[6,7]);
 
 // Создайте массив d2 с числовыми величинами 45,78,10,3.
 // Посчитайте в переменную sum2 сумму чисел в нем, при помощи цикла for.
 
+let d2 = [45, 78, 10, 3];
+let sum2 = 0;
+for (i = d2.length - 1; i >= 0; i--) {
+	sum2 += d2[i];
+}
+console.log(sum2);
+
 // Создайте массив d3 с числовыми величинами 45,78,10,3. Добавьте в массив d3 еще одно число (например, d[7] = 100)
 // Посчитайте в переменную sum3 сумму чисел в нем, при помощи цикла for/in.
 
+let d3 = [45, 78, 10, 3];
+d3[7] = 100;
+let sum3 = 0;
+for (i = d3.length - 1; i >= 0; i--) {
+	if (typeof d3[i] === 'number')
+		sum3 += d3[i];
+}
+console.log(sum3);
+
 // Создайте массив d4 с числовыми величинами 45,78,10,3. Напишите функцию сортировки my(a,b), которая 
 // при вызове d4.sort(my) отсортирует элементы массива по убыванию чисел. Вызовите d4.sort(my).
+
+let d4 = [45, 78, 10, 3];
+let my = (a, b) => { return b - a };
+d4.sort(my);
+console.log(d4);
 
 // (*) Создайте двумерный массив d5 размером n=3 элементов в каждом из которых будет m=4 элементов из
 // целых чисел (в каждый элемент поместить цифру 5).
 // Примечание: при создании двумерного массива используйте циклы.
 // Во внешнем цикле должна появиться конструкция d5[i] = [];
+
+let n = 3;
+let m = 4;
+let d5 = [];
+for (let i = 0; i < n; i++) {
+	d5[i] = [];
+	for (let j = 0; j < m; j++) {
+		d5[i][j] = 5;
+	}
+};
+console.log(d5);
